@@ -7,7 +7,7 @@ import DogInfo from "../../components/Result/DogInfo/DogInfo";
 const ResultsController = (props) => {
   return (
     <div id="ResultsController">
-      <PhotoFrame />
+      <PhotoFrame photo={props.photo} />
       <ResultsList />
       <DogInfo />
     </div>

@@ -6,8 +6,8 @@ import PhotoFrame from "../../components/Photo/PhotoFrame/PhotoFrame";
 const PhotoController = (props) => {
   return (
     <div id="PhotoController">
-      <PhotoFrame />
-      <PhotoControls />
+      <PhotoFrame photo={props.photo} />
+      <PhotoControls photoUpdated={props.photoUpdated} />
     </div>
   );
 };

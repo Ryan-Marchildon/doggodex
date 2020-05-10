@@ -8,3 +8,24 @@
   box-sizing: border-box;
   cursor: pointer;
 }
+
+.button {
+  display: inline-block;
+  line-height: 2.2em;
+  padding: 0 0.62em;
+  border: 1px solid #666;
+  border-radius: 0.25em;
+  background-image: linear-gradient(to bottom, #fff, #ccc);
+  box-shadow: inset 0 0 0.1em #fff, 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.3);
+  font-family: arial, sans-serif;
+  font-size: 0.8em;
+}
+
+.button:hover {
+  border-color: #3c7fb1;
+  background-image: linear-gradient(to bottom, #fff, #a9dbf6);
+}
+
+.button:focus {
+  padding: 0 0.56em 0 0.68em;
+}
