@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import classes from "./PhotoControls.module.css";
 
+// TODO: upload from camera, upload from URL
+
 class PhotoControls extends Component {
   state = {
     showFileExtensionAlert: false,

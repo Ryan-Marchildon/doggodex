@@ -9,6 +9,9 @@
 # production
 /build
 
+# classifier model assets
+dbc_stanford_10_23.pb
+
 # misc
 .vscode
 /.vscode
@@ -17,6 +20,7 @@
 .env.development.local
 .env.test.local
 .env.production.local
+.ipynb_checkpoints
 
 npm-debug.log*
 yarn-debug.log*
