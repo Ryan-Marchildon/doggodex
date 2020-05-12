@@ -2,6 +2,11 @@
 
 A simple web app for a client-side dog breed image classifier.
 
+### Usage
+1. From within the root folder, install dependencies (e.g. `yarn install`)
+2. Launch the local python-based predictor (see section below). 
+3. Launch the React app via the development server (e.g. `yarn start`).
+
 ### Local Python-Based Predictor
 
 For development purposes. You will manually need to add the frozen model file `dbc_stanford_10_23.pb` to the `./python/model_assets` folder.
