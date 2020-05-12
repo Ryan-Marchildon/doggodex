@@ -10,6 +10,7 @@ const PhotoController = (props) => {
       <PhotoControls
         photoUpdated={props.photoUpdated}
         classifyPhoto={props.classifyPhoto}
+        classifyButtonActive={props.classifyButtonActive}
       />
     </div>
   );

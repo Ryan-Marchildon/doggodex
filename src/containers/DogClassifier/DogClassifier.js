@@ -9,6 +9,7 @@ class DogClassifier extends Component {
   state = {
     isSubmittingPhoto: true,
     isShowingResults: false,
+    haveUserPhoto: false,
     importedPhotoFile: null,
     importedPhotoURL: null,
     topResults: null,
@@ -27,6 +28,7 @@ class DogClassifier extends Component {
     this.setState({
       importedPhotoFile: photoFile,
       importedPhotoURL: URL.createObjectURL(photoFile),
+      haveUserPhoto: true,
     });
   };
 
@@ -75,6 +77,7 @@ class DogClassifier extends Component {
           photo={this.state.importedPhotoURL}
           photoUpdated={this.updatePhotoHandler}
           classifyPhoto={this.classifyImageHandler}
+          classifyButtonActive={this.state.haveUserPhoto}
         />
       );
     }

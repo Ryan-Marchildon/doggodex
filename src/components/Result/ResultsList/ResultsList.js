@@ -1,5 +1,6 @@
 import React from "react";
 
+import ResultItem from "../ResultItem/ResultItem";
 import classes from "./ResultsList.module.css";
 
 const ResultsList = (props) => {
@@ -7,9 +8,11 @@ const ResultsList = (props) => {
   if (props.results) {
     results = props.results.map((result) => {
       return (
-        <p key={"result-" + result["breed"]}>
-          Breed:{result["breed"]}, Probability:{result["prob"]}
-        </p>
+        <ResultItem
+          key={"result-" + result["breed"]}
+          breed={result["breed"]}
+          probability={result["prob"]}
+        />
       );
     });
   }
