@@ -11,11 +11,13 @@ class PhotoControls extends Component {
 
   fileSelectedHandler = (event) => {
     const file = event.target.files[0];
-    if (file.type === "image/jpeg") {
-      this.props.photoUpdated(file);
-      this.setState({ showFileExtensionAlert: false });
-    } else {
-      this.setState({ showFileExtensionAlert: true });
+    if (file) {
+      if (file.type === "image/jpeg") {
+        this.props.photoUpdated(file);
+        this.setState({ showFileExtensionAlert: false });
+      } else {
+        this.setState({ showFileExtensionAlert: true });
+      }
     }
   };
 
