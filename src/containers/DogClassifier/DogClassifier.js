@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import PhotoController from "../PhotoController/PhotoController";
 import ResultsController from "../ResultsController/ResultsController";
 import classes from "./DogClassifier.module.css";
+import axiosPredictorEndpoint from "../../axios";
 
 class DogClassifier extends Component {
   state = {
@@ -38,13 +39,17 @@ class DogClassifier extends Component {
     });
   };
 
-  encodeImageAsBase64 = async (photofile) => {
-    console.log(await this.toBase64(photofile));
-  };
-
-  classifyImageHandler = () => {
+  classifyImageHandler = async () => {
     console.log("Image sent for classification.");
-    this.encodeImageAsBase64(this.state.importedPhotoFile);
+    const imgData = await this.toBase64(this.state.importedPhotoFile);
+    axiosPredictorEndpoint
+      .post("/invocations", { image: imgData })
+      .then((res) => {
+        console.log("Classification Results:", res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   render() {

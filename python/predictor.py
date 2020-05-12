@@ -13,6 +13,7 @@ except ImportError:
     from io import StringIO
 
 import flask
+from flask_cors import CORS
 
 import numpy as np
 import pandas as pd
@@ -110,7 +111,11 @@ class ScoringService(object):
 
 
 # FLASK APP FOR SERVING PREDICTIONS
+# =================================
 app = flask.Flask(__name__)
+CORS(app)
+
+
 @app.route('/ping', methods=['GET'])
 def ping():
     """
@@ -149,6 +154,11 @@ def transformation():
 
     # read in the file
     img_base64_string = request_data['image']
+
+    # strip type from a JS FileReader-generated base64 string
+    if img_base64_string.startswith("data:image/jpeg;base64,"):
+        img_base64_string = img_base64_string.split("base64,")[1]
+
     img_file = base64.b64decode(img_base64_string)
 
     # obtain prediction
