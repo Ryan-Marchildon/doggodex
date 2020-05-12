@@ -7,7 +7,10 @@ const PhotoController = (props) => {
   return (
     <div id="PhotoController">
       <PhotoFrame photo={props.photo} />
-      <PhotoControls photoUpdated={props.photoUpdated} />
+      <PhotoControls
+        photoUpdated={props.photoUpdated}
+        classifyPhoto={props.classifyPhoto}
+      />
     </div>
   );
 };

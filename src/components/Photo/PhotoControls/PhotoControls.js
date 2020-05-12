@@ -45,7 +45,9 @@ class PhotoControls extends Component {
           />
         </div>
         {fileExtensionAlert}
-        <button className={classes.button}>Classify Image!</button>
+        <button className={classes.button} onClick={this.props.classifyPhoto}>
+          Classify Image!
+        </button>
       </div>
     );
   }

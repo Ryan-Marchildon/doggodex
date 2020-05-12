@@ -29,6 +29,24 @@ class DogClassifier extends Component {
     });
   };
 
+  toBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = (error) => reject(error);
+    });
+  };
+
+  encodeImageAsBase64 = async (photofile) => {
+    console.log(await this.toBase64(photofile));
+  };
+
+  classifyImageHandler = () => {
+    console.log("Image sent for classification.");
+    this.encodeImageAsBase64(this.state.importedPhotoFile);
+  };
+
   render() {
     let photoController = null;
     if (this.state.isSubmittingPhoto) {
@@ -36,6 +54,7 @@ class DogClassifier extends Component {
         <PhotoController
           photo={this.state.importedPhotoURL}
           photoUpdated={this.updatePhotoHandler}
+          classifyPhoto={this.classifyImageHandler}
         />
       );
     }
