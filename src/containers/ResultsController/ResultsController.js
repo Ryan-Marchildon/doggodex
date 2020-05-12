@@ -8,7 +8,7 @@ const ResultsController = (props) => {
   return (
     <div id="ResultsController">
       <PhotoFrame photo={props.photo} />
-      <ResultsList />
+      <ResultsList results={props.results} />
       <DogInfo />
     </div>
   );

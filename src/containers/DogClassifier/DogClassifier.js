@@ -39,13 +39,28 @@ class DogClassifier extends Component {
     });
   };
 
+  postProcessResults = (rawResults) => {
+    const { breed, prob } = rawResults;
+    const keys = Object.keys(prob);
+    const rankedResults = keys
+      .map((key) => ({ breed: breed[key], prob: prob[key] }))
+      .sort((a, b) => b["prob"] - a["prob"]);
+    return rankedResults;
+  };
+
+  updateTopResults = (rawResults) => {
+    const rankedResults = this.postProcessResults(rawResults);
+    this.setState({ topResults: rankedResults });
+  };
+
   classifyImageHandler = async () => {
     console.log("Image sent for classification.");
     const imgData = await this.toBase64(this.state.importedPhotoFile);
     axiosPredictorEndpoint
       .post("/invocations", { image: imgData })
       .then((res) => {
-        console.log("Classification Results:", res.data);
+        this.updateTopResults(res.data);
+        this.modeToggleHandler();
       })
       .catch((error) => {
         console.log(error);
@@ -67,7 +82,10 @@ class DogClassifier extends Component {
     let resultsController = null;
     if (this.state.isShowingResults) {
       resultsController = (
-        <ResultsController photo={this.state.importedPhotoURL} />
+        <ResultsController
+          photo={this.state.importedPhotoURL}
+          results={this.state.topResults}
+        />
       );
     }
 
