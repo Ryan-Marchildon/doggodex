@@ -1,4 +1,21 @@
 .DogClassifier {
-  align-items: center;
-  margin: 5px 0;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.PhotoController {
+  flex-flow: 1 1 30%;
+}
+
+.ResultsController {
+  flex-flow: 2 1 auto;
+}
+
+@media (min-width: 40rem) {
+  .DogClassifier {
+    flex-flow: row nowrap;
+  }
 }

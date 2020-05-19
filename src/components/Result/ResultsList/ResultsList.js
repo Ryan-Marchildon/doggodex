@@ -4,7 +4,7 @@ import ResultItem from "../ResultItem/ResultItem";
 import classes from "./ResultsList.module.css";
 
 const ResultsList = (props) => {
-  let results = "[Results]";
+  let results = "[Results List]";
   if (props.results) {
     results = props.results.map((result) => {
       return (

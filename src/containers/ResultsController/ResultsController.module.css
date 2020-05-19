@@ -1,0 +1,10 @@
+.ResultsController {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+@media (min-width: 40rem) {
+  .ResultsController {
+    flex-flow: row nowrap;
+  }
+}

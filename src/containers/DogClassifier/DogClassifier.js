@@ -10,7 +10,7 @@ const MAX_IMAGE_WIDTH_PX = 1000;
 class DogClassifier extends Component {
   state = {
     isSubmittingPhoto: true,
-    isShowingResults: false,
+    isShowingResults: true,
     haveUserPhoto: false,
     importedPhotoFile: null,
     importedPhotoURL: null,
@@ -95,7 +95,7 @@ class DogClassifier extends Component {
       .post("/invocations", { image: imgData })
       .then((res) => {
         this.updateTopResults(res.data);
-        this.modeToggleHandler();
+        // this.modeToggleHandler();
       })
       .catch((error) => {
         console.log(error);
@@ -107,6 +107,7 @@ class DogClassifier extends Component {
     if (this.state.isSubmittingPhoto) {
       photoController = (
         <PhotoController
+          className={classes.PhotoController}
           photo={this.state.importedPhotoURL}
           photoUpdated={this.updatePhotoHandler}
           classifyPhoto={this.classifyImageHandler}
@@ -119,6 +120,7 @@ class DogClassifier extends Component {
     if (this.state.isShowingResults) {
       resultsController = (
         <ResultsController
+          className={classes.ResultsController}
           photo={this.state.importedPhotoURL}
           results={this.state.topResults}
         />
@@ -127,7 +129,6 @@ class DogClassifier extends Component {
 
     return (
       <div className={classes.DogClassifier}>
-        <button onClick={this.modeToggleHandler}>Toggle Mode</button>
         {photoController}
         {resultsController}
       </div>

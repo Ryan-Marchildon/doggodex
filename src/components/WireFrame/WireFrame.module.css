@@ -1,0 +1,110 @@
+.WireFrame {
+  margin: 75px 5px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.PhotoController {
+  border: 1px solid #eee;
+  box-shadow: 0 2px 3px #ccc;
+  padding: 8px;
+  margin: 4px;
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 400px;
+}
+
+.ResultsController {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.ResultInfo {
+  border: 1px solid #eee;
+  box-shadow: 0 2px 3px #ccc;
+  padding: 8px;
+  margin: 4px;
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.matchSummary {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin: 8px 0;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+  padding: 12px;
+  border: 1px solid black;
+}
+
+.matchSummary p {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.matchSummary__breed {
+  font-size: 20px;
+}
+
+.matchSummary__percentage {
+  font-size: 14px;
+}
+
+.matchSummary__rank {
+  font-size: 14px;
+}
+
+.ResultsList {
+  border: 1px solid #eee;
+  box-shadow: 0 2px 3px #ccc;
+  padding: 8px;
+  margin: 4px;
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 400px;
+}
+
+.widened {
+  width: 80%;
+}
+
+@media (min-width: 40rem) {
+  .WireFrame {
+    flex-flow: row nowrap;
+  }
+
+  .PhotoController {
+    width: 30%;
+  }
+
+  .ResultsController {
+    width: 60%;
+    flex-flow: row nowrap;
+  }
+
+  .ResultInfo {
+    width: 50%;
+  }
+
+  .ResultsList {
+    width: 50%;
+  }
+}

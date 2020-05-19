@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import Toolbar from "../../components/Navigation/Toolbar/Toolbar";
+import WireFrame from "../../components/WireFrame/WireFrame";
 import classes from "./Layout.module.css";
 
 class Layout extends Component {
@@ -8,7 +9,8 @@ class Layout extends Component {
     return (
       <React.Fragment>
         <Toolbar />
-        <main className={classes.Content}>{this.props.children}</main>
+        <WireFrame />
+        {/* <main className={classes.Content}>{this.props.children}</main> */}
       </React.Fragment>
     );
   }

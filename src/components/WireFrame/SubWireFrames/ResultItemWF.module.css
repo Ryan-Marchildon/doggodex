@@ -1,0 +1,61 @@
+.ResultItem {
+  width: 100%;
+  margin: 4px 0;
+  line-height: 2.2em;
+  padding: 0 0.62em;
+  border: 1px solid #666;
+  border-radius: 0.25em;
+  background-image: linear-gradient(to bottom, #fff, #ccc);
+  box-shadow: inset 0 0 0.1em #fff, 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ResultItem:hover {
+  border-color: #3c7fb1;
+  background-image: linear-gradient(to bottom, #fff, #a9dbf6);
+}
+
+.ResultItem:focus {
+  outline: 2px solid rgba(33, 181, 33, 0.8);
+  outline-style: outset;
+  background-image: linear-gradient(to bottom, #fff, rgba(33, 181, 33, 0.8));
+}
+
+.ResultItem__details {
+  width: 80%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: left;
+  align-items: center;
+}
+
+.ResultItem__details__rank {
+  margin: 0 4px;
+}
+
+.ResultItem__details__photo {
+  height: 60px;
+  margin: 0 4px;
+}
+
+.ResultItem__details__match {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  text-align: left;
+  margin: 0 4px;
+}
+
+.ResultItem__details__match__breed {
+  font-size: 14px;
+}
+
+.ResultItem__details__match p,
+.ResultItem__details__match strong {
+  margin: 0px 0;
+  padding: 0;
+  line-height: 0.9rem;
+}

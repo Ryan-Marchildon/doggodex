@@ -1,15 +1,14 @@
 import React from "react";
 
-import PhotoFrame from "../../components/Photo/PhotoFrame/PhotoFrame";
 import ResultsList from "../../components/Result/ResultsList/ResultsList";
-import DogInfo from "../../components/Result/DogInfo/DogInfo";
+import ResultInfo from "../../components/Result/ResultInfo/ResultInfo";
+import classes from "./ResultsController.module.css";
 
 const ResultsController = (props) => {
   return (
-    <div id="ResultsController">
-      <PhotoFrame photo={props.photo} />
+    <div id="ResultsController" className={classes.ResultsController}>
+      <ResultInfo photo={props.photo} />
       <ResultsList results={props.results} />
-      <DogInfo />
     </div>
   );
 };
