@@ -4,15 +4,34 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: cornflowerblue;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(250, 220, 160),
+    rgb(170, 135, 69)
+  );
   display: flex;
-  justify-content: space-between;
+  flex-flow: row nowrap;
+  justify-content: center;
   align-items: center;
   padding: 0 20px;
   box-sizing: border-box;
-  z-index: 90;
+  z-index: 10;
 }
 
 .Toolbar nav {
   height: 100%;
+}
+
+.logo {
+  position: fixed;
+  vertical-align: middle;
+  left: 16px;
+  height: 50px;
+  width: 50px;
+}
+
+.header {
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
 }

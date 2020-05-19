@@ -6,13 +6,16 @@ import ResultItemWF from "./SubWireFrames/ResultItemWF";
 
 const WireFrame = (props) => {
   return (
-    <div className={classes.WireFrame}>
-      <div className={classes.PhotoController}>
-        <div>
+    <React.Fragment>
+      <div className={classes.WireFrame}>
+        <div className={classes.PhotoController}>
           <div className={classes.heading}>Your Photo</div>
-          <img src="/dog_image_placeholder.png" alt="your cute puppy here!" />
-        </div>
-        <div>
+          <img
+            className={classes.image}
+            src="/golden_retriever_2.jpg"
+            alt="your cute puppy here!"
+          />
+
           <button className={[btnClasses.button, classes.widened].join(" ")}>
             <strong>Select Image (JPG)</strong>
           </button>
@@ -20,36 +23,45 @@ const WireFrame = (props) => {
             <strong>Classify Breed</strong>
           </button>
         </div>
-      </div>
-      <div className={classes.ResultsController}>
-        <div className={classes.ResultInfo}>
-          <div className={classes.heading}>Closest Match</div>
-          <img src="/dog_image_placeholder.png" alt="your cute puppy here!" />
-          <div className={classes.matchSummary}>
-            <div>
-              <p className={classes.matchSummary__breed}>
-                <strong>Yorkshire Terrier</strong>
-              </p>
-              <p className={classes.matchSummary__percentage}>99% Match</p>
+        <div className={classes.ResultsController}>
+          <div className={classes.ResultInfo}>
+            <div className={classes.heading}>Closest Match</div>
+            <img
+              className={classes.image}
+              src="/golden_retriever_2.jpg"
+              alt="your cute puppy here!"
+            />
+            <div className={classes.matchSummary}>
+              <div>
+                <p className={classes.matchSummary__breed}>
+                  <strong>Yorkshire Terrier</strong>
+                </p>
+                <p className={classes.matchSummary__percentage}>99% Match</p>
+              </div>
+              <div>
+                <p className={classes.matchSummary__rank}>#1</p>
+              </div>
             </div>
-            <div>
-              <p className={classes.matchSummary__rank}>#1</p>
-            </div>
+            <button className={[btnClasses.button, classes.widened].join(" ")}>
+              <strong>Breed Info</strong>
+            </button>
           </div>
+          <div className={classes.ResultsList}>
+            <div className={classes.heading}>Top 5 Matches</div>
+            <ResultItemWF />
+            <ResultItemWF />
+            <ResultItemWF />
+            <ResultItemWF />
+            <ResultItemWF />
+          </div>
+        </div>
+        <div className={classes.Reset}>
           <button className={[btnClasses.button, classes.widened].join(" ")}>
-            <strong>Breed Info</strong>
+            Start Over
           </button>
         </div>
-        <div className={classes.ResultsList}>
-          <div>Top 5 Matches</div>
-          <ResultItemWF />
-          <ResultItemWF />
-          <ResultItemWF />
-          <ResultItemWF />
-          <ResultItemWF />
-        </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 

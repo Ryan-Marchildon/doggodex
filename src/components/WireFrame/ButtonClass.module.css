@@ -5,14 +5,14 @@
 
 .button {
   zoom: 1;
-  padding: 8px 20px;
-  margin: 4px;
+  padding: 16px 20px;
+  margin: 8px;
   cursor: pointer;
   border: 1px solid #bbb;
   overflow: visible;
   background-color: #ddd;
   font-family: arial, sans-serif;
-  font-size: 0.8em;
+  font-size: 1em;
   color: black;
 
   background-image: linear-gradient(to bottom, #fff, #ccc);
