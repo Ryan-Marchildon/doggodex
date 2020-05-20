@@ -6,8 +6,8 @@ import ResultItemWF from "./SubWireFrames/ResultItemWF";
 
 const WireFrame = (props) => {
   return (
-    <React.Fragment>
-      <div className={classes.WireFrame}>
+    <div className={classes.DogClassifer}>
+      <div className={classes.Main}>
         <div className={classes.PhotoController}>
           <div className={classes.heading}>Your Photo</div>
           <img
@@ -55,13 +55,13 @@ const WireFrame = (props) => {
             <ResultItemWF />
           </div>
         </div>
-        <div className={classes.Reset}>
-          <button className={[btnClasses.button, classes.widened].join(" ")}>
-            Start Over
-          </button>
-        </div>
       </div>
-    </React.Fragment>
+      <div className={classes.Reset}>
+        <button className={[btnClasses.button, classes.widened].join(" ")}>
+          Start Over
+        </button>
+      </div>
+    </div>
   );
 };
 
