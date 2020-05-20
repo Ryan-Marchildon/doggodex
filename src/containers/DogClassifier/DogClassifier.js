@@ -2,6 +2,10 @@ import React, { Component } from "react";
 
 import PhotoController from "../PhotoController/PhotoController";
 import ResultsController from "../ResultsController/ResultsController";
+import StyledButton from "../../components/UI/StyledButton/StyledButton";
+
+import ResultItemWF from "../../components/WireFrame/SubWireFrames/ResultItemWF";
+
 import classes from "./DogClassifier.module.css";
 import axiosPredictorEndpoint from "../../axios";
 
@@ -111,7 +115,7 @@ class DogClassifier extends Component {
           photo={this.state.importedPhotoURL}
           photoUpdated={this.updatePhotoHandler}
           classifyPhoto={this.classifyImageHandler}
-          classifyButtonActive={this.state.haveUserPhoto}
+          classifyStyledButtonActive={this.state.haveUserPhoto}
         />
       );
     }
@@ -128,9 +132,49 @@ class DogClassifier extends Component {
     }
 
     return (
-      <div className={classes.DogClassifier}>
-        {photoController}
-        {resultsController}
+      <div className={classes.DogClassifer}>
+        <div className={classes.Main}>
+          <div className={classes.PhotoController}>
+            <div className={classes.heading}>Your Photo</div>
+            <div className={classes.PhotoFrame}></div>
+            <StyledButton>
+              <strong>Select Image (JPG)</strong>
+            </StyledButton>
+            <StyledButton>
+              <strong>Classify Breed</strong>
+            </StyledButton>
+          </div>
+          <div className={classes.ResultInfo}>
+            <div className={classes.heading}>Closest Match</div>
+            <div className={classes.PhotoFrame}></div>
+            <div className={classes.matchSummary}>
+              <div>
+                <p className={classes.matchSummary__breed}>
+                  <strong>Yorkshire Terrier</strong>
+                </p>
+                <p className={classes.matchSummary__percentage}>99% Match</p>
+              </div>
+              <div>
+                <p className={classes.matchSummary__rank}>#1</p>
+              </div>
+            </div>
+            <StyledButton>
+              <strong>Breed Info</strong>
+            </StyledButton>
+          </div>
+          <div className={classes.flexBreak}></div>
+          <div className={classes.ResultsList}>
+            <div className={classes.heading}>Top 5 Matches</div>
+            <ResultItemWF />
+            <ResultItemWF />
+            <ResultItemWF />
+            <ResultItemWF />
+            <ResultItemWF />
+          </div>
+        </div>
+        <div className={classes.Reset}>
+          <StyledButton>Start Over</StyledButton>
+        </div>
       </div>
     );
   }
