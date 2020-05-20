@@ -5,6 +5,7 @@ import pandas as pd
 BREEDS_CSV = './model_assets/breeds.csv'
 WRITE_FILE_PATH = '../src/assets'
 
+# NOTE: asterisk (*) indicates abbreviated name
 NAME_MAP = {
     'affenpinscher': 'Affenpinscher',
     'afghan_hound': 'Afghan Hound',
