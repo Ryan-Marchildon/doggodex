@@ -4,6 +4,7 @@ import PhotoController from "../PhotoController/PhotoController";
 import ResultsController from "../ResultsController/ResultsController";
 import StyledButton from "../../components/UI/StyledButton/StyledButton";
 
+import ResultInfo from "../../components/Result/ResultInfo/ResultInfo";
 import ResultsList from "../../components/Result/ResultsList/ResultsList";
 
 import classes from "./DogClassifier.module.css";
@@ -144,24 +145,7 @@ class DogClassifier extends Component {
               <strong>Classify Breed</strong>
             </StyledButton>
           </div>
-          <div className={classes.ResultInfo}>
-            <div className={classes.heading}>Closest Match</div>
-            <div className={classes.PhotoFrame}></div>
-            <div className={classes.matchSummary}>
-              <div>
-                <p className={classes.matchSummary__breed}>
-                  <strong>Yorkshire Terrier</strong>
-                </p>
-                <p className={classes.matchSummary__percentage}>99% Match</p>
-              </div>
-              <div>
-                <p className={classes.matchSummary__rank}>#1</p>
-              </div>
-            </div>
-            <StyledButton>
-              <strong>Breed Info</strong>
-            </StyledButton>
-          </div>
+          <ResultInfo />
           <div className={classes.flexBreak}></div>
           <ResultsList />
         </div>

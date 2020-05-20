@@ -32,33 +32,10 @@
   background-color: rgba(255, 255, 255, 0.75);
 }
 
-.ResultInfo {
-  border: 1px solid #eee;
-  border-radius: 8px;
-  box-shadow: 0 2px 3px #ccc;
-  padding: 24px;
-  margin: 12px 8px;
-  text-align: center;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: space-between;
-  height: 550px;
-  background-color: rgba(255, 255, 255, 0.75);
-}
-
 .heading {
   font-weight: bold;
   font-size: 22px;
   margin-bottom: 8px;
-}
-
-.image {
-  width: 100%;
-  height: auto;
-  height: 300px;
-  border: 2px solid black;
-  margin: 8px 0;
 }
 
 .PhotoFrame {
@@ -72,37 +49,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-}
-
-.matchSummary {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin: 8px 0;
-  box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.75);
-  padding: 12px;
-  border: 1px solid black;
-  background-color: white;
-}
-
-.matchSummary p {
-  margin-top: 0;
-  margin-bottom: 0;
-  text-align: left;
-}
-
-.matchSummary__breed {
-  font-size: 20px;
-}
-
-.matchSummary__percentage {
-  font-size: 14px;
-}
-
-.matchSummary__rank {
-  font-size: 14px;
 }
 
 .flexBreak {
@@ -134,10 +80,6 @@
     width: 30%;
   }
 
-  .ResultInfo {
-    width: 30%;
-  }
-
   .Reset {
     width: 30%;
   }
@@ -155,10 +97,6 @@
   }
 
   .PhotoController {
-    width: 45%;
-  }
-
-  .ResultInfo {
     width: 45%;
   }
 }
