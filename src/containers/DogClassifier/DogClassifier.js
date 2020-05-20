@@ -4,8 +4,6 @@ import PhotoController from "../PhotoController/PhotoController";
 import ResultsController from "../ResultsController/ResultsController";
 import StyledButton from "../../components/UI/StyledButton/StyledButton";
 
-import PhotoFrame from "../../components/Photo/PhotoFrame/PhotoFrame";
-
 import ResultInfo from "../../components/Result/ResultInfo/ResultInfo";
 import ResultsList from "../../components/Result/ResultsList/ResultsList";
 
@@ -137,16 +135,7 @@ class DogClassifier extends Component {
     return (
       <div className={classes.DogClassifer}>
         <div className={classes.Main}>
-          <div className={classes.PhotoController}>
-            <div className={classes.heading}>Your Photo</div>
-            <PhotoFrame />
-            <StyledButton>
-              <strong>Select Image (JPG)</strong>
-            </StyledButton>
-            <StyledButton>
-              <strong>Classify Breed</strong>
-            </StyledButton>
-          </div>
+          <PhotoController />
           <ResultInfo />
           <div className={classes.flexBreak}></div>
           <ResultsList />

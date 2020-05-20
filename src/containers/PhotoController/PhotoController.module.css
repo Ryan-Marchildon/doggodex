@@ -1,0 +1,32 @@
+.PhotoController {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  box-shadow: 0 2px 3px #ccc;
+  padding: 24px;
+  margin: 12px 8px;
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 550px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 40rem) {
+  .PhotoController {
+    width: 30%;
+  }
+}
+
+@media (min-width: 40rem) and (max-width: 60rem) {
+  .PhotoController {
+    width: 45%;
+  }
+}
