@@ -15,7 +15,7 @@ const ResultInfo = (props) => {
   //   </div>
   // );
   return (
-    <div className={classes.ResultInfo}>
+    <div className={["container", classes.ResultInfo].join(" ")}>
       <div className="heading">Closest Match</div>
       <PhotoFrame />
       <div className={classes.matchSummary}>

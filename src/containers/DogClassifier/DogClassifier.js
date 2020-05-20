@@ -139,7 +139,7 @@ class DogClassifier extends Component {
           <div className={classes.flexBreak}></div>
           <ResultsList />
         </div>
-        <div className={classes.Reset}>
+        <div className={["container", classes.Reset].join(" ")}>
           <StyledButton>Start Over</StyledButton>
         </div>
       </div>

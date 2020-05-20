@@ -72,7 +72,7 @@ class PhotoController extends Component {
 
   render() {
     return (
-      <div className={classes.PhotoController}>
+      <div className={["container", classes.PhotoController].join(" ")}>
         <div className="heading">Your Photo</div>
         <PhotoFrame />
         <StyledButton>

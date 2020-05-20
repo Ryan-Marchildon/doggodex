@@ -20,7 +20,7 @@ const ResultsList = (props) => {
   // }
 
   return (
-    <div className={classes.ResultsList}>
+    <div className={["container", classes.ResultsList].join(" ")}>
       <div className="heading">Top 5 Matches</div>
       <ResultItem />
       <ResultItem />
