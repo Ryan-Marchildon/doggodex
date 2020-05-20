@@ -4,7 +4,7 @@ import PhotoController from "../PhotoController/PhotoController";
 import ResultsController from "../ResultsController/ResultsController";
 import StyledButton from "../../components/UI/StyledButton/StyledButton";
 
-import ResultItem from "../../components/Result/ResultItem/ResultItem";
+import ResultsList from "../../components/Result/ResultsList/ResultsList";
 
 import classes from "./DogClassifier.module.css";
 import axiosPredictorEndpoint from "../../axios";
@@ -163,14 +163,7 @@ class DogClassifier extends Component {
             </StyledButton>
           </div>
           <div className={classes.flexBreak}></div>
-          <div className={classes.ResultsList}>
-            <div className={classes.heading}>Top 5 Matches</div>
-            <ResultItem />
-            <ResultItem />
-            <ResultItem />
-            <ResultItem />
-            <ResultItem />
-          </div>
+          <ResultsList />
         </div>
         <div className={classes.Reset}>
           <StyledButton>Start Over</StyledButton>
