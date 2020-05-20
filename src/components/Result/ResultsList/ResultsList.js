@@ -6,27 +6,24 @@ import "../../../App.css";
 import classes from "./ResultsList.module.css";
 
 const ResultsList = (props) => {
-  // let results = "[Results List]";
-  // if (props.results) {
-  //   results = props.results.map((result) => {
-  //     return (
-  //       <ResultItem
-  //         key={"result-" + result["breed"]}
-  //         breed={result["breed"]}
-  //         probability={result["prob"]}
-  //       />
-  //     );
-  //   });
-  // }
+  let results = null;
+  if (props.results) {
+    results = props.results.map((result, index) => {
+      return (
+        <ResultItem
+          key={"result-" + result["breed"]}
+          breed={result["breed"]}
+          probability={result["prob"]}
+          rank={index + 1}
+        />
+      );
+    });
+  }
 
   return (
     <div className={["container", classes.ResultsList].join(" ")}>
       <div className="heading">Top 5 Matches</div>
-      <ResultItem />
-      <ResultItem />
-      <ResultItem />
-      <ResultItem />
-      <ResultItem />
+      {results}
     </div>
   );
 };

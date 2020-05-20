@@ -19,14 +19,13 @@ class DogClassifier extends Component {
     importedPhotoFile: null,
     importedPhotoURL: null,
     topResults: null,
+    selectedResult: null,
   };
 
-  modeToggleHandler = () => {
-    this.setState((prevState) => {
-      return {
-        showResults: !prevState.showResults,
-        showReset: !prevState.showReset,
-      };
+  showResultsHandler = () => {
+    this.setState({
+      showResults: true,
+      showReset: true,
     });
   };
 
@@ -89,7 +88,14 @@ class DogClassifier extends Component {
 
   updateTopResults = (rawResults) => {
     const rankedResults = this.postProcessResults(rawResults);
-    this.setState({ topResults: rankedResults });
+    this.setState({
+      topResults: rankedResults,
+      selectedResult: {
+        rank: 1,
+        breed: rankedResults[0].breed,
+        prob: rankedResults[0].prob,
+      },
+    });
   };
 
   classifyImageHandler = async () => {
@@ -99,7 +105,7 @@ class DogClassifier extends Component {
       .post("/invocations", { image: imgData })
       .then((res) => {
         this.updateTopResults(res.data);
-        // this.modeToggleHandler();
+        this.showResultsHandler();
       })
       .catch((error) => {
         console.log(error);
@@ -111,9 +117,9 @@ class DogClassifier extends Component {
     if (this.state.showResults) {
       results = (
         <React.Fragment>
-          <ResultInfo />
+          <ResultInfo result={this.state.selectedResult} />
           <div className={classes.flexBreak}></div>
-          <ResultsList />
+          <ResultsList results={this.state.topResults} />
         </React.Fragment>
       );
     }
