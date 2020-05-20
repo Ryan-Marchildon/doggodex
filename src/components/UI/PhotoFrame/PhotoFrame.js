@@ -2,26 +2,18 @@ import React from "react";
 
 import classes from "./PhotoFrame.module.css";
 
-const photoFrame = (props) => {
-  let photo = (
-    <img
-      className={classes.image}
-      src="/dog_image_placeholder.png"
-      alt="your cute puppy here!"
-    />
-  );
+const PhotoFrame = (props) => {
+  let photo = "url('/dog_image_placeholder.png')";
   if (props.photo !== null) {
-    photo = (
-      <img
-        className={classes.image}
-        src={props.photo}
-        alt="your cute puppy here!"
-      />
-    );
+    photo = "url(" + props.photo + ")";
   }
 
-  // return <div className={classes.PhotoFrame}>{photo}</div>;
-  return <div className={classes.PhotoFrame}></div>;
+  return (
+    <div
+      className={classes.PhotoFrame}
+      style={{ backgroundImage: photo }}
+    ></div>
+  );
 };
 
-export default photoFrame;
+export default PhotoFrame;

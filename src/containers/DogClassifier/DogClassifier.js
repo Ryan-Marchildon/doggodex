@@ -1,20 +1,20 @@
 import React, { Component } from "react";
 
 import PhotoController from "../PhotoController/PhotoController";
-import StyledButton from "../../components/UI/StyledButton/StyledButton";
-
 import ResultInfo from "../../components/Result/ResultInfo/ResultInfo";
 import ResultsList from "../../components/Result/ResultsList/ResultsList";
+import StyledButton from "../../components/UI/StyledButton/StyledButton";
+
+import axiosPredictorEndpoint from "../../axios";
 
 import classes from "./DogClassifier.module.css";
-import axiosPredictorEndpoint from "../../axios";
 
 const MAX_IMAGE_WIDTH_PX = 1000;
 
 class DogClassifier extends Component {
   state = {
-    isSubmittingPhoto: true,
-    isShowingResults: true,
+    showResults: false,
+    showReset: false,
     haveUserPhoto: false,
     importedPhotoFile: null,
     importedPhotoURL: null,
@@ -24,8 +24,8 @@ class DogClassifier extends Component {
   modeToggleHandler = () => {
     this.setState((prevState) => {
       return {
-        isSubmittingPhoto: !prevState.isSubmittingPhoto,
-        isShowingResults: !prevState.isShowingResults,
+        showResults: !prevState.showResults,
+        showReset: !prevState.showReset,
       };
     });
   };
@@ -107,41 +107,40 @@ class DogClassifier extends Component {
   };
 
   render() {
-    let photoController = null;
-    if (this.state.isSubmittingPhoto) {
-      photoController = (
-        <PhotoController
-          className={classes.PhotoController}
-          photo={this.state.importedPhotoURL}
-          photoUpdated={this.updatePhotoHandler}
-          classifyPhoto={this.classifyImageHandler}
-          classifyStyledButtonActive={this.state.haveUserPhoto}
-        />
+    let results = null;
+    if (this.state.showResults) {
+      results = (
+        <React.Fragment>
+          <ResultInfo />
+          <div className={classes.flexBreak}></div>
+          <ResultsList />
+        </React.Fragment>
       );
     }
 
-    // let resultsController = null;
-    // if (this.state.isShowingResults) {
-    //   resultsController = (
-    //     <ResultsController
-    //       className={classes.ResultsController}
-    //       photo={this.state.importedPhotoURL}
-    //       results={this.state.topResults}
-    //     />
-    //   );
-    // }
+    let reset = null;
+    if (this.state.showReset) {
+      reset = (
+        <React.Fragment>
+          <div className={["container", classes.Reset].join(" ")}>
+            <StyledButton>Start Over</StyledButton>
+          </div>
+        </React.Fragment>
+      );
+    }
 
     return (
       <div className={classes.DogClassifer}>
         <div className={classes.Main}>
-          <PhotoController />
-          <ResultInfo />
-          <div className={classes.flexBreak}></div>
-          <ResultsList />
+          <PhotoController
+            photo={this.state.importedPhotoURL}
+            photoUpdated={this.updatePhotoHandler}
+            classifyPhoto={this.classifyImageHandler}
+            classifyButtonActive={this.state.haveUserPhoto}
+          />
+          {results}
         </div>
-        <div className={["container", classes.Reset].join(" ")}>
-          <StyledButton>Start Over</StyledButton>
-        </div>
+        {reset}
       </div>
     );
   }
