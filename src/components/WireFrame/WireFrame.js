@@ -15,7 +15,6 @@ const WireFrame = (props) => {
             src="/golden_retriever_2.jpg"
             alt="your cute puppy here!"
           />
-
           <button className={[btnClasses.button, classes.widened].join(" ")}>
             <strong>Select Image (JPG)</strong>
           </button>
@@ -23,37 +22,36 @@ const WireFrame = (props) => {
             <strong>Classify Breed</strong>
           </button>
         </div>
-        <div className={classes.ResultsController}>
-          <div className={classes.ResultInfo}>
-            <div className={classes.heading}>Closest Match</div>
-            <img
-              className={classes.image}
-              src="/golden_retriever_2.jpg"
-              alt="your cute puppy here!"
-            />
-            <div className={classes.matchSummary}>
-              <div>
-                <p className={classes.matchSummary__breed}>
-                  <strong>Yorkshire Terrier</strong>
-                </p>
-                <p className={classes.matchSummary__percentage}>99% Match</p>
-              </div>
-              <div>
-                <p className={classes.matchSummary__rank}>#1</p>
-              </div>
+        <div className={classes.ResultInfo}>
+          <div className={classes.heading}>Closest Match</div>
+          <img
+            className={classes.image}
+            src="/golden_retriever_2.jpg"
+            alt="your cute puppy here!"
+          />
+          <div className={classes.matchSummary}>
+            <div>
+              <p className={classes.matchSummary__breed}>
+                <strong>Yorkshire Terrier</strong>
+              </p>
+              <p className={classes.matchSummary__percentage}>99% Match</p>
             </div>
-            <button className={[btnClasses.button, classes.widened].join(" ")}>
-              <strong>Breed Info</strong>
-            </button>
+            <div>
+              <p className={classes.matchSummary__rank}>#1</p>
+            </div>
           </div>
-          <div className={classes.ResultsList}>
-            <div className={classes.heading}>Top 5 Matches</div>
-            <ResultItemWF />
-            <ResultItemWF />
-            <ResultItemWF />
-            <ResultItemWF />
-            <ResultItemWF />
-          </div>
+          <button className={[btnClasses.button, classes.widened].join(" ")}>
+            <strong>Breed Info</strong>
+          </button>
+        </div>
+        <div className={classes.flexBreak}></div>
+        <div className={classes.ResultsList}>
+          <div className={classes.heading}>Top 5 Matches</div>
+          <ResultItemWF />
+          <ResultItemWF />
+          <ResultItemWF />
+          <ResultItemWF />
+          <ResultItemWF />
         </div>
       </div>
       <div className={classes.Reset}>

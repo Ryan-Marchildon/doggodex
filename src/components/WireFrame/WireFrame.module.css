@@ -116,7 +116,7 @@
 }
 
 .flexBreak {
-  flex-basis: 100%;
+  flex-basis: 0%;
   height: 0;
 }
 
@@ -143,20 +143,39 @@
     width: 30%;
   }
 
-  .ResultsController {
-    width: 62.5%;
-    flex-flow: row nowrap;
-  }
-
   .ResultInfo {
-    width: 50%;
+    width: 30%;
   }
 
   .ResultsList {
-    width: 50%;
+    width: 30%;
   }
 
   .Reset {
     width: 30%;
+  }
+}
+
+@media (min-width: 40rem) and (max-width: 60rem) {
+  .Main {
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .flexBreak {
+    flex-basis: 100%;
+  }
+
+  .PhotoController {
+    width: 45%;
+  }
+
+  .ResultInfo {
+    width: 45%;
+  }
+
+  .ResultsList {
+    width: 92%;
   }
 }
