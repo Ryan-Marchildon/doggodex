@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import StyledButton from "../../components/UI/StyledButton/StyledButton";
 import PhotoFrame from "../../components/UI/PhotoFrame/PhotoFrame";
+
+import "../../App.css";
 import classes from "./PhotoController.module.css";
 
 // TODO: upload from camera, upload from URL
@@ -71,7 +73,7 @@ class PhotoController extends Component {
   render() {
     return (
       <div className={classes.PhotoController}>
-        <div className={classes.heading}>Your Photo</div>
+        <div className="heading">Your Photo</div>
         <PhotoFrame />
         <StyledButton>
           <strong>Select Image (JPG)</strong>

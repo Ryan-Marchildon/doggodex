@@ -13,12 +13,6 @@
   background-color: rgba(255, 255, 255, 0.75);
 }
 
-.heading {
-  font-weight: bold;
-  font-size: 22px;
-  margin-bottom: 8px;
-}
-
 @media (min-width: 40rem) {
   .PhotoController {
     width: 30%;

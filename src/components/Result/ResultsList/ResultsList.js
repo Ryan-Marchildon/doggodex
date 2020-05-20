@@ -1,6 +1,8 @@
 import React from "react";
 
 import ResultItem from "../ResultItem/ResultItem";
+
+import "../../../App.css";
 import classes from "./ResultsList.module.css";
 
 const ResultsList = (props) => {
@@ -19,7 +21,7 @@ const ResultsList = (props) => {
 
   return (
     <div className={classes.ResultsList}>
-      <div className={classes.heading}>Top 5 Matches</div>
+      <div className="heading">Top 5 Matches</div>
       <ResultItem />
       <ResultItem />
       <ResultItem />

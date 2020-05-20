@@ -1,10 +1,10 @@
 import React from "react";
 
 import PhotoFrame from "../../UI/PhotoFrame/PhotoFrame";
-import DogInfo from "../DogInfo/DogInfo";
 
 import StyledButton from "../../UI/StyledButton/StyledButton";
 
+import "../../../App.css";
 import classes from "./ResultInfo.module.css";
 
 const ResultInfo = (props) => {
@@ -16,7 +16,7 @@ const ResultInfo = (props) => {
   // );
   return (
     <div className={classes.ResultInfo}>
-      <div className={classes.heading}>Closest Match</div>
+      <div className="heading">Closest Match</div>
       <PhotoFrame />
       <div className={classes.matchSummary}>
         <div>
