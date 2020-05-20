@@ -4,6 +4,8 @@ import PhotoController from "../PhotoController/PhotoController";
 import ResultsController from "../ResultsController/ResultsController";
 import StyledButton from "../../components/UI/StyledButton/StyledButton";
 
+import PhotoFrame from "../../components/Photo/PhotoFrame/PhotoFrame";
+
 import ResultInfo from "../../components/Result/ResultInfo/ResultInfo";
 import ResultsList from "../../components/Result/ResultsList/ResultsList";
 
@@ -137,7 +139,7 @@ class DogClassifier extends Component {
         <div className={classes.Main}>
           <div className={classes.PhotoController}>
             <div className={classes.heading}>Your Photo</div>
-            <div className={classes.PhotoFrame}></div>
+            <PhotoFrame />
             <StyledButton>
               <strong>Select Image (JPG)</strong>
             </StyledButton>

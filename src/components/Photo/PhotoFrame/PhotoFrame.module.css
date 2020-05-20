@@ -1,15 +1,12 @@
 .PhotoFrame {
-  width: 300px;
-  padding: 16px;
-  text-align: center;
-  border: 1px solid #eee;
-  box-shadow: 0 2px 3px #ccc;
-  margin: 10px;
-  box-sizing: border-box;
-  cursor: pointer;
-}
-
-.image {
-  max-width: 300px;
   width: 100%;
+  height: auto;
+  min-height: 300px;
+  border: 2px solid black;
+  border-radius: 12px;
+  margin: 8px 0;
+  background-image: url("/dog_image_placeholder.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }

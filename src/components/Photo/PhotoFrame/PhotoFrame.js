@@ -20,7 +20,8 @@ const photoFrame = (props) => {
     );
   }
 
-  return <div className={classes.PhotoFrame}>{photo}</div>;
+  // return <div className={classes.PhotoFrame}>{photo}</div>;
+  return <div className={classes.PhotoFrame}></div>;
 };
 
 export default photoFrame;

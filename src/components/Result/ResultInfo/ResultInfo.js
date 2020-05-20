@@ -17,7 +17,7 @@ const ResultInfo = (props) => {
   return (
     <div className={classes.ResultInfo}>
       <div className={classes.heading}>Closest Match</div>
-      <div className={classes.PhotoFrame}></div>
+      <PhotoFrame />
       <div className={classes.matchSummary}>
         <div>
           <p className={classes.matchSummary__breed}>
