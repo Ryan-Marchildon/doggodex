@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import StyledButton from "../../components/UI/StyledButton/StyledButton";
-import PhotoFrame from "../../components/Photo/PhotoFrame/PhotoFrame";
+import PhotoFrame from "../../components/UI/PhotoFrame/PhotoFrame";
 import classes from "./PhotoController.module.css";
 
 // TODO: upload from camera, upload from URL

@@ -1,6 +1,6 @@
 import React from "react";
 
-import PhotoFrame from "../../Photo/PhotoFrame/PhotoFrame";
+import PhotoFrame from "../../UI/PhotoFrame/PhotoFrame";
 import DogInfo from "../DogInfo/DogInfo";
 
 import StyledButton from "../../UI/StyledButton/StyledButton";
