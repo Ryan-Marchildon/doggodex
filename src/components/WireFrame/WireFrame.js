@@ -10,11 +10,7 @@ const WireFrame = (props) => {
       <div className={classes.Main}>
         <div className={classes.PhotoController}>
           <div className={classes.heading}>Your Photo</div>
-          <img
-            className={classes.image}
-            src="/golden_retriever_2.jpg"
-            alt="your cute puppy here!"
-          />
+          <div className={classes.PhotoFrame}></div>
           <button className={[btnClasses.button, classes.widened].join(" ")}>
             <strong>Select Image (JPG)</strong>
           </button>
@@ -24,11 +20,12 @@ const WireFrame = (props) => {
         </div>
         <div className={classes.ResultInfo}>
           <div className={classes.heading}>Closest Match</div>
-          <img
+          <div className={classes.PhotoFrame}></div>
+          {/* <img
             className={classes.image}
             src="/golden_retriever_2.jpg"
             alt="your cute puppy here!"
-          />
+          /> */}
           <div className={classes.matchSummary}>
             <div>
               <p className={classes.matchSummary__breed}>
