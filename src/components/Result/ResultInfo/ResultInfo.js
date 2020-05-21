@@ -1,15 +1,11 @@
 import React from "react";
 
 import PhotoFrame from "../../UI/PhotoFrame/PhotoFrame";
-
 import StyledButton from "../../UI/StyledButton/StyledButton";
+import dogBreeds from "../../../assets/dog_breeds.json";
 
 import "../../../App.css";
 import classes from "./ResultInfo.module.css";
-
-// rank: 1,
-// breed: rankedResults[0].breed,
-// prob: rankedResults[0].prob,
 
 const ResultInfo = (props) => {
   let header = "Selected Match";
@@ -17,17 +13,19 @@ const ResultInfo = (props) => {
     header = "Closest Match";
   }
 
+  const breed = dogBreeds[props.result.breed];
+
   return (
     <div className={["container", classes.ResultInfo].join(" ")}>
       <div className="heading">{header}</div>
-      <PhotoFrame />
+      <PhotoFrame photo={breed.photo_path} />
       <div className={classes.matchSummary}>
         <div>
           <p className={classes.matchSummary__breed}>
-            <strong>{props.result.breed}</strong>
+            <strong>{breed.name}</strong>
           </p>
           <p className={classes.matchSummary__percentage}>
-            {(parseFloat(props.result.prob) * 100).toFixed(2) + "%"} Match
+            {(parseFloat(props.result.prob) * 100).toFixed(2) + "%"} match
           </p>
         </div>
         <div>
