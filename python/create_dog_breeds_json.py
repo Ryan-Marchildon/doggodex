@@ -45,7 +45,7 @@ NAME_MAP = {
     'dandie_dinmont': 'Dandie Dinmont',
     'dhole': 'Dhole',
     'dingo': 'Dingo',
-    'doberman': 'Doberman',
+    'doberman': 'Doberman Pinscher',
     'english_foxhound': 'English Foxhound',
     'english_setter': 'English Setter',
     'english_springer': 'English Springer',
