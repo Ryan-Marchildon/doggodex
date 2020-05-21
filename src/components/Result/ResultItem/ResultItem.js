@@ -6,7 +6,13 @@ import classes from "./ResultItem.module.css";
 const ResultItem = (props) => {
   let trophy = null;
   if (props.rank === 1) {
-    trophy = "[Trophy]";
+    trophy = (
+      <img
+        className={classes.ResultItem__trophy__img}
+        src="/trophy_icon.png"
+        alt="winner"
+      ></img>
+    );
   }
 
   const breed = dogBreeds[props.breed];
