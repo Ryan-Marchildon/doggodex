@@ -6,6 +6,8 @@ import "../../../App.css";
 import classes from "./ResultsList.module.css";
 
 const ResultsList = (props) => {
+  const selectedResultIndex = props.selectedResult.rank - 1;
+
   let results = null;
   if (props.results) {
     results = props.results.map((result, index) => {
@@ -16,6 +18,7 @@ const ResultsList = (props) => {
           probability={result["prob"]}
           rank={index + 1}
           clicked={props.itemClicked}
+          selected={selectedResultIndex === index}
         />
       );
     });

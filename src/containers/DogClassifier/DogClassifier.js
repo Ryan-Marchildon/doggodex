@@ -20,6 +20,7 @@ class DogClassifier extends Component {
     importedPhotoURL: null,
     topResults: null,
     selectedResult: null,
+    selectedResultItemNumber: null,
   };
 
   showResultsHandler = () => {
@@ -143,6 +144,7 @@ class DogClassifier extends Component {
           <div className={classes.flexBreak}></div>
           <ResultsList
             results={this.state.topResults}
+            selectedResult={this.state.selectedResult}
             itemClicked={this.updateSelectedResultHandler}
           />
         </React.Fragment>

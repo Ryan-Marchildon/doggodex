@@ -4,6 +4,13 @@ import dogBreeds from "../../../assets/dog_breeds.json";
 import classes from "./ResultItem.module.css";
 
 const ResultItem = (props) => {
+  const result = {
+    rank: props.rank,
+    breed: props.breed,
+    probability: props.probability,
+  };
+  const breed = dogBreeds[props.breed];
+
   let trophy = null;
   if (props.rank === 1) {
     trophy = (
@@ -15,16 +22,14 @@ const ResultItem = (props) => {
     );
   }
 
-  const result = {
-    rank: props.rank,
-    breed: props.breed,
-    probability: props.probability,
-  };
-  const breed = dogBreeds[props.breed];
+  const buttonStyling = [classes.ResultItem];
+  if (props.selected) {
+    buttonStyling.push(classes.active);
+  }
 
   return (
     <button
-      className={classes.ResultItem}
+      className={buttonStyling.join(" ")}
       onClick={props.clicked.bind(this, result)}
     >
       <div className={classes.ResultItem__details}>

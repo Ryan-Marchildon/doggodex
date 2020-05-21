@@ -12,6 +12,7 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 
 .ResultItem:hover {
@@ -19,7 +20,8 @@
   background-image: linear-gradient(to bottom, #fff, #a9dbf6);
 }
 
-.ResultItem:focus {
+.ResultItem:focus,
+.active {
   outline: 2px solid rgba(33, 181, 33, 0.8);
   outline-style: outset;
   background-image: linear-gradient(to bottom, #fff, rgba(33, 181, 33, 0.8));
