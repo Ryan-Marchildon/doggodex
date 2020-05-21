@@ -20,7 +20,6 @@ class DogClassifier extends Component {
     importedPhotoURL: null,
     topResults: null,
     selectedResult: null,
-    selectedResultItemNumber: null,
   };
 
   showResultsHandler = () => {
