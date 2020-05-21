@@ -15,6 +15,7 @@ const ResultsList = (props) => {
           breed={result["breed"]}
           probability={result["prob"]}
           rank={index + 1}
+          clicked={props.itemClicked}
         />
       );
     });

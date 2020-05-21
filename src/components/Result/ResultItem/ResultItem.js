@@ -15,10 +15,18 @@ const ResultItem = (props) => {
     );
   }
 
+  const result = {
+    rank: props.rank,
+    breed: props.breed,
+    probability: props.probability,
+  };
   const breed = dogBreeds[props.breed];
 
   return (
-    <button className={classes.ResultItem}>
+    <button
+      className={classes.ResultItem}
+      onClick={props.clicked.bind(this, result)}
+    >
       <div className={classes.ResultItem__details}>
         <p className={classes.ResultItem__details__rank}>{props.rank}.</p>
         <img

@@ -112,6 +112,16 @@ class DogClassifier extends Component {
       });
   };
 
+  updateSelectedResultHandler = (result) => {
+    this.setState({
+      selectedResult: {
+        rank: result.rank,
+        breed: result.breed,
+        prob: result.probability,
+      },
+    });
+  };
+
   resetButtonHandler = () => {
     this.setState({
       showResults: false,
@@ -131,7 +141,10 @@ class DogClassifier extends Component {
         <React.Fragment>
           <ResultInfo result={this.state.selectedResult} />
           <div className={classes.flexBreak}></div>
-          <ResultsList results={this.state.topResults} />
+          <ResultsList
+            results={this.state.topResults}
+            itemClicked={this.updateSelectedResultHandler}
+          />
         </React.Fragment>
       );
     }
