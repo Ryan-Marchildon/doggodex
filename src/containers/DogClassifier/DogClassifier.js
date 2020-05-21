@@ -112,6 +112,18 @@ class DogClassifier extends Component {
       });
   };
 
+  resetButtonHandler = () => {
+    this.setState({
+      showResults: false,
+      showReset: false,
+      haveUserPhoto: false,
+      importedPhotoFile: null,
+      importedPhotoURL: null,
+      topResults: null,
+      selectedResult: null,
+    });
+  };
+
   render() {
     let results = null;
     if (this.state.showResults) {
@@ -129,7 +141,9 @@ class DogClassifier extends Component {
       reset = (
         <React.Fragment>
           <div className={["container", classes.Reset].join(" ")}>
-            <StyledButton>Start Over</StyledButton>
+            <StyledButton clicked={this.resetButtonHandler}>
+              Start Over
+            </StyledButton>
           </div>
         </React.Fragment>
       );
