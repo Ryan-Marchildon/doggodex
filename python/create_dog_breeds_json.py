@@ -40,7 +40,7 @@ NAME_MAP = {
     'chow': 'Chow',
     'clumber': 'Clumber',
     'cocker_spaniel': 'Cocker Spaniel',
-    'collie': 'Collie',
+    'collie': 'Standard Collie',
     'curly-coated_retriever': 'Curly-Coated Retriever',
     'dandie_dinmont': 'Dandie Dinmont',
     'dhole': 'Dhole',
