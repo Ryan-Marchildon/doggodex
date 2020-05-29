@@ -1,4 +1,4 @@
-# doggodex
+# DoggoDex
 
 DoggoDex is a simple web app for demoing a client-side dog breed image classifier.
 
@@ -15,7 +15,7 @@ Preview of current version (desktop view):
 
 ### Local Python-Based Predictor
 
-For development purposes. You will manually need to add the frozen model file `dbc_stanford_10_23.pb` to the `./python/model_assets` folder.
+For development purposes. You will manually need to add the frozen model file `dbc_stanford_10_23.pb` to the `./python/model_assets` folder (download the model file [here](https://rpm-public-assets.s3.ca-central-1.amazonaws.com/data_and_models/dbc_stanford_10_23.pb)).
 
 To run local classifier on a Flask-based server, first build and activate the conda environment using:
 
