@@ -4,7 +4,8 @@ DoggoDex is a simple web app for demoing a client-side dog breed image classifie
 
 The classifier is currently a tensorflow graph served locally via Flask. In the near-term this will be converted to an optimized TensorFlow.JS model to run directly in the browser.
 
-![App Preview](https://github.com/Ryan-Marchildon/doggodex/public/github/preview_v1.png)
+Preview of current version (desktop view):
+![App Preview](https://github.com/Ryan-Marchildon/doggodex/blob/master/public/github/preview_v1.png)
 
 ### Usage
 
