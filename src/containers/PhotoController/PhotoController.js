@@ -26,7 +26,11 @@ const PhotoController = (props) => {
     <div className={["container", classes.PhotoController].join(" ")}>
       <div className="heading">Your Photo</div>
       <PhotoFrame photo={props.photo} />
-      <StyledButton buttonType="input" fileSelected={fileSelectedHandler}>
+      <StyledButton
+        buttonType="input"
+        fileSelected={fileSelectedHandler}
+        disabled={!props.selectImageButtonActive}
+      >
         <strong>Select Image (JPG)</strong>
       </StyledButton>
 

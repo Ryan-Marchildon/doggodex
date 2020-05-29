@@ -21,8 +21,13 @@ const Button = (props) => {
           type="file"
           accept="image/jpeg"
           onChange={props.fileSelected}
+          disabled={props.disabled}
         />
-        <label htmlFor="image_upload" className={classes.Button}>
+        <label
+          htmlFor="image_upload"
+          className={classes.Button}
+          disabled={props.disabled}
+        >
           {props.children}
         </label>
       </React.Fragment>

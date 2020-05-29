@@ -170,7 +170,10 @@ class DogClassifier extends Component {
             photo={this.state.importedPhotoURL}
             photoUpdated={this.updatePhotoHandler}
             classifyPhoto={this.classifyImageHandler}
-            classifyButtonActive={this.state.haveUserPhoto}
+            classifyButtonActive={
+              this.state.haveUserPhoto && !this.state.showResults
+            }
+            selectImageButtonActive={!this.state.showResults}
           />
           {results}
         </div>
