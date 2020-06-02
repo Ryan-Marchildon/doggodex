@@ -26,3 +26,8 @@ Then navigate into `./python` and execute the following commands in terminal:
 
 - `python predictor.py` to launch the classification service
 - `python local_client.py` to launch the local client to send test images to the classifier
+
+### Classifier Training
+
+To download and unpack the original Stanford Dogs dataset into the appropriate project directories,
+`cd` into `./python/model_training` and execute the bash script `./retrieve_dataset.sh`.

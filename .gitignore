@@ -3,6 +3,9 @@
 /.pnp
 .pnp.js
 
+# development notebooks
+*.ipynb
+
 # testing
 /coverage
 
@@ -14,12 +17,11 @@ dbc_stanford_10_23.pb
 
 # training data
 /python/model_training/data
-/python/model_training
 
 # misc
 Notes.md
-.vscode
-/.vscode
+# .vscode
+# /.vscode
 .DS_Store
 .env.local
 .env.development.local
