@@ -26,7 +26,7 @@ from sklearn import preprocessing
 LOCALHOST_PORT = 5007
 
 CWD = os.getcwd()
-MODEL_PATH = os.path.join(CWD, 'model_assets')
+MODEL_PATH = os.path.join(CWD, 'model', 'assets')
 
 CURRENT_MODEL_NAME = 'dbc_stanford_10_23'
 INCEPTION_INPUT_TENSOR = 'DecodeJpeg/contents:0'
