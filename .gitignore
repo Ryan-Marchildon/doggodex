@@ -16,7 +16,7 @@
 dbc_stanford_10_23.pb
 
 # training data
-/python/model_training/data
+/python/model/data
 
 # misc
 Notes.md

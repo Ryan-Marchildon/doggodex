@@ -29,5 +29,9 @@ Then navigate into `./python` and execute the following commands in terminal:
 
 ### Classifier Training
 
-To download and unpack the original Stanford Dogs dataset into the appropriate project directories,
-`cd` into `./python/model_training` and execute the bash script `./retrieve_dataset.sh`.
+- To download and unpack the original Stanford Dogs dataset into the appropriate project directories,
+  `cd` into `./python/model` and execute the bash script `./retrieve_dataset.sh`.
+
+- To convert the raw data into TFRecords, cd into `./python/` and run `python ./preproc/create_raw_data_tfrecords.py`.
+
+- To regenerate the `dog_breeds.json` file which tells the frontend how to map breed classes to breed names, images and links, cd into `./python/` and run `python ./preproc/create_dog_breeds_json.py`. Edit this file directly if you wish to modify the displayed breed name.

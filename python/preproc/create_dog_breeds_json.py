@@ -1,9 +1,11 @@
+# create_dog_breeds_json.py
+
 import os
 import json
 import pandas as pd
 
-BREEDS_CSV = './model_assets/breeds.csv'
-WRITE_FILE_PATH = '../src/assets'
+from lib import paths
+
 
 # NOTE: asterisk (*) indicates abbreviated name
 NAME_MAP = {
@@ -132,7 +134,7 @@ NAME_MAP = {
 
 if __name__ == '__main__':
 
-    df = pd.read_csv(BREEDS_CSV)
+    df = pd.read_csv(paths.BREEDS_CSV)
 
     dog_breeds = {}
     for index, row in df.iterrows():
@@ -142,5 +144,5 @@ if __name__ == '__main__':
             'photo_path': '/dog_breeds/' + str(row.breed) + '.jpg'
         }
 
-    with open(os.path.join(WRITE_FILE_PATH, 'dog_breeds.json'), 'w') as json_file:
+    with open(paths.BREEDS_JSON, 'w') as json_file:
         dog_breeds_json = json.dump(dog_breeds, json_file, sort_keys=True)

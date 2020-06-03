@@ -13,5 +13,7 @@
   "editor.fontLigatures": true,
   "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
   "editor.acceptSuggestionOnCommitCharacter": false,
-  "git.ignoreLimitWarning": true
+  "git.ignoreLimitWarning": true,
+  "python.dataScience.textOutputLimit": 0,
+  "python.dataScience.notebookFileRoot": "${fileDirname}"
 }
